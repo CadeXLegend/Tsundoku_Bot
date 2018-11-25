@@ -10,11 +10,6 @@ namespace Tsundoku_Bot.Discord.Systems
         /// </summary>
         public string Token { get; set; }
 
-        /// <summary>
-        /// The Discord Socket Configuration Information to be Parsed.
-        /// </summary>
-        public DiscordSocketConfig socketConfig { get; set; }
-
         public BotConfiguration()
         {
             Console.WriteLine("Bot Configuration Successfully Initialized.");
