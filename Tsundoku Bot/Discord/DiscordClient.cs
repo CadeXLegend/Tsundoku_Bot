@@ -19,11 +19,8 @@ namespace Tsundoku_Bot.Discord
             //Register Storage Instance
             IDataStorage storage = Unity.Resolve<IDataStorage>();
 
-            string token = "EFG";
             //Grabs the Desktop Directory and Formats it Correctly
             string dir = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory).Replace("\\", "/") + "/Config/JsonData";
-            //Then Stores the Information in a JSON File
-            storage.StoreDataObject(token, dir);
 
             //Establish the Connection
             Connection connection = Unity.Resolve<Connection>();
@@ -31,8 +28,6 @@ namespace Tsundoku_Bot.Discord
             {
                 Token = storage.RetrieveStoredObject<string>(dir)
             });
-            //keep it from closing 
-            await Task.Delay(-1);
         }
     }
 }
