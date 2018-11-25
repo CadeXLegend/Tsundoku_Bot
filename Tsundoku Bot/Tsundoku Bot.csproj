@@ -1,9 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RootNamespace>Tsundoku_Bot</RootNamespace>
+    <ApplicationIcon>game_icon.ico</ApplicationIcon>
+    <StartupObject>Tsundoku_Bot.Program</StartupObject>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

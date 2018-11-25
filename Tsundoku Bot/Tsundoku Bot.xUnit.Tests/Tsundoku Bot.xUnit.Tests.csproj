@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <DebugType>full</DebugType>
     <IsPackable>false</IsPackable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <RootNamespace>Tsundoku_Bot.xUnit.Tests</RootNamespace>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
