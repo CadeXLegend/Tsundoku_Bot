@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Discord;
 using Discord.WebSocket;
 using Tsundoku_Bot.Discord.Systems;
 
@@ -28,6 +29,12 @@ namespace Tsundoku_Bot.Discord
         internal async Task ConnectAsync(BotConfiguration config)
         {
             _client.Log += _logger.Log;
+
+            await _client.LoginAsync(TokenType.Bot, config.Token);
+            await _client.StartAsync();
+
+            //Keep it from closing
+            await Task.Delay(-1);
         }
     }
 }
